@@ -1,5 +1,4 @@
-# Magento 2 Docker - Simple
-
+# Magento 2 CookBook Docker
  
 ## Kudos and Respect
 
