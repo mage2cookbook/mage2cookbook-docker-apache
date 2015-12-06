@@ -39,7 +39,7 @@ There is also a Magento 2 Sample Data Docker container [https://github.com/mage2
 4. `docker run --rm --name magento2 -it -p 80:80 --link mysql:mysql \
 	-e MYSQL_USER=root -e MYSQL_PASSWORD=admin \
 	-e PUBLIC_HOST=yourdomain.com \
-	raybogman/mage2cookbook-sample-docker $*`
+	raybogman/mage2cookbook-docker $*`
 
 5. Go have a break, this will take some time
 
