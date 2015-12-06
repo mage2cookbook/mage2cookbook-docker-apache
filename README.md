@@ -21,7 +21,7 @@ The repo is build on the stable Magento 2 data set incl.
 - bin/magento cache:flush
 - bin/magento setup:static-content:deploy
 
-There is also a Magento 2 Sample Data Docker container [https://github.com/mage2cookbook/mage2cookbook-sample-docker-apache](https://)
+There is also a Magento 2 Sample Data Docker container https://github.com/mage2cookbook/mage2cookbook-sample-docker-apache
 
 - bin/magento sampledata:deploy
 - php /var/www/magento2/composer.phar update
