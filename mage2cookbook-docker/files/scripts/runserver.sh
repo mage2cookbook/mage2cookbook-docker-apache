@@ -27,6 +27,8 @@ bin/magento setup:install \
 		--admin-email=john@doe.com \
 		--admin-user=admin \
 		--admin-password=password123 \
+		--use-rewrites=1 \
+                --cleanup-database \
 
 # Check permissions again
 find . -type d -exec chmod 770 {} \; && find . -type f -exec chmod 660 {} \; && chmod u+x bin/magento
