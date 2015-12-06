@@ -27,13 +27,13 @@ There is also a Magento 2 Sample Data Docker container [https://github.com/mage2
 # Pre-Requisites
 
 1. Install Docker (I'm using a DigitalOcean droplet )
-2. docker run -d --name mysql -p 3306:3306 \
+2. `docker run -d --name mysql -p 3306:3306 \
 	-e MYSQL_ROOT_PASSWORD=admin \
-	mysql:5.6
-3. docker run --rm --name magento2 -it -p 80:80 --link mysql:mysql \
+	mysql:5.6`
+3. `docker run --rm --name magento2 -it -p 80:80 --link mysql:mysql \
 	-e MYSQL_USER=root -e MYSQL_PASSWORD=admin \
 	-e PUBLIC_HOST=yourdomain.com \
-	raybogman/mage2cookbook-sample-docker $*
+	raybogman/mage2cookbook-sample-docker $*`
 4. Change the PUBLIC_HOST with your IP of domain name. It will automaticly add the IP of domain to your Magento 2 configuration. 
 
 # Execution
