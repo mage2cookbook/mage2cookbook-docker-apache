@@ -24,25 +24,28 @@ There is also a Magento 2 Sample Data Docker container [https://github.com/mage2
 - bin/magento sampledata:deploy
 - php /var/www/magento2/composer.phar update
 
-# Pre-Requisites
+# Execution
 
 1. Install Docker (I'm using a DigitalOcean droplet )
+
 2. `docker run -d --name mysql -p 3306:3306 \
 	-e MYSQL_ROOT_PASSWORD=admin \
 	mysql:5.6`
-3. `docker run --rm --name magento2 -it -p 80:80 --link mysql:mysql \
+
+3. Change the PUBLIC_HOST with your IP or domain name in the command below. It will automatically add the IP of domain to your Magento 2 configuration. 
+
+4. `docker run --rm --name magento2 -it -p 80:80 --link mysql:mysql \
 	-e MYSQL_USER=root -e MYSQL_PASSWORD=admin \
 	-e PUBLIC_HOST=yourdomain.com \
 	raybogman/mage2cookbook-sample-docker $*`
-4. Change the PUBLIC_HOST with your IP of domain name. It will automaticly add the IP of domain to your Magento 2 configuration. 
 
-# Execution
+5. Go have a break, this will take some time
 
-1. git clone this
-2. In base directory do `docker-compose build`
-3. Go have a cup of tea
-4. When finished do `docker-compose up`
-5. Connect to magento in browser via your docker ip address (you see this when you first load docker terminal window) 
+6. Open your browser en goto the addressed domain name or IP.
+
+As you may see the Apache2 process is working in the FOREGROUND. You can kill it by using CTRL+C on the terminal.
+
+Tip: Open a second terminal window and run `docker exec -it magento2 bash` this allows you to enter the Magento 2 container. All files are located in `/var/www/magento2/htdocs`. To enter the MySQL database use `docker exec -it mysql bash`
 
 
 # Useful Docker commands
