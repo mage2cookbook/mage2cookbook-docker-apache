@@ -1,7 +1,8 @@
 # Magento 2 CookBook Docker
 
 This Magento 2 Docker repo is used in the upcoming Magento 2 CookBook by Packtpub Publishing medio 2016
-written by: Ray Bogman & Vladimir Kerkhof
+
+written by: Ray Bogman & Vladimir Kerkhoff
 
 ## Kudos and Respect
 
