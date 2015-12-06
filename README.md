@@ -51,9 +51,16 @@ Tip: Open a second terminal window and run `docker exec -it magento2 bash` this 
 # Useful Docker commands
 
   docker ps
+
   docker images
+
   docker exec -it <image_id> bash
+
   docker stop
+
+  docker rm -f $(docker ps -a -q)
+
+  docker rmi -f $(docker images -q)
 
 
 # Notes
