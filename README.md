@@ -28,7 +28,7 @@ There is also a Magento 2 Sample Data Docker container https://github.com/mage2c
 
 # Execution
 
-1. Install Docker (I'm using a DigitalOcean droplet )
+1. Install Docker (I'm using a DigitalOcean droplet)
 
 2. `docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=admin mysql:5.6`
 
@@ -44,7 +44,9 @@ As you may see the Apache2 process is working in the FOREGROUND. You can kill it
 
 Tip: Open a second terminal window and run `docker exec -it magento2 bash` this allows you to enter the Magento 2 container. All files are located in `/var/www/magento2/htdocs`. To enter the MySQL database use `docker exec -it mysql bash`
 
-
+Magento username = admin
+Magento password = password123
+Backend URL      = /admin
 # Useful Docker commands
 
   docker ps
